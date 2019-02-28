@@ -1,0 +1,14 @@
+{% block content %}
+    <h1>Sign In</h1>
+    <form action="" method="post" novalidate>
+        {% from "_formhelpers.html" import render_errors, render_field %}
+        {{ form.hidden_tag() }}
+        <p>
+            {{ render_field(form.phone_number1, type='number') }}
+        </p>
+        <p>
+            {{ render_field(form.phone_number2, type='number') }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
